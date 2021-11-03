@@ -1,5 +1,7 @@
 import { StyleSheet } from 'react-native'
-import { COLORS, SIZES } from './config/constants';
+import { COLORS, FONTS } from './config/constants';
+import { Platform } from 'react-native';
+
 const styles = StyleSheet.create({
     container: {
         flex: 1,
@@ -7,7 +9,7 @@ const styles = StyleSheet.create({
     },
     screens: {
         flex: 1,
-        padding: 24
+        padding: 15
     },
     header: {
         width: '100%',
@@ -16,15 +18,21 @@ const styles = StyleSheet.create({
         flexDirection: 'row'
     },
     headerText: {
-        fontFamily: 'montserrat-bold',
-        fontSize: SIZES.h2,
+        ...FONTS.h2,
         color: COLORS.font
     },
     profile_badge: {
-        width: 50,
-        height: 50,
+        width: 40,
+        height: 40,
         borderRadius: 50,
-        marginBottom: 10
+        backgroundColor: COLORS.primary,
+        marginBottom: 10,
+        justifyContent: 'center',
+        alignItems: 'center',
+        ...Platform.select({
+            ios: { ...COLORS.boxShadowIos},
+            android: { ...COLORS.boxShadowAndroid}
+        }),
     }
 });
 

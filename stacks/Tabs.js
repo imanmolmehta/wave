@@ -19,7 +19,12 @@ const BottomNav = () => (
             position: 'absolute',
             right: 0,
             left: 0,
-            bottom: 0
+            bottom: 0,
+        },
+        tabBarLabelStyle: {
+            fontFamily: 'montserrat-semibold',
+            fontSize: SIZES.base + 4,
+            marginTop: -10
         },
         tabBarActiveTintColor: COLORS.fonts_primary_color,
         tabBarInactiveTintColor: COLORS.fonts_secondary_color
@@ -32,10 +37,6 @@ const BottomNav = () => (
                     <MaterialCommunityIcons name="home" size={SIZES.h1} color={color} />
                 ),
                 tabBarLabel: 'Home',
-                tabBarLabelStyle: {
-                    fontSize: SIZES.body5,
-                    marginTop: -10
-                }
             }}
         />
         <Stack.Screen
@@ -46,10 +47,6 @@ const BottomNav = () => (
                     <MaterialIcons name="explore" size={SIZES.h1} color={color} />
                 ),
                 tabBarLabel: 'Explore',
-                tabBarLabelStyle: {
-                    fontSize: SIZES.body5,
-                    marginTop: -10
-                }
             }}
         />
     </Stack.Navigator>
