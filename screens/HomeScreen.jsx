@@ -1,8 +1,8 @@
 import React from 'react'
-import { Text, View, Image, Platform } from 'react-native'
-import { COLORS } from '../config/constants'
+import { Text, View } from 'react-native'
 import styles from '../global-styles'
 import ScreenLayout from './ScreenLayout'
+import { Avatar } from 'react-native-paper'
 
 const HomeScreen = () => {
     return (
@@ -12,17 +12,11 @@ const HomeScreen = () => {
                 <View >
                     <Text style={styles.headerText}>Welcome Back</Text>
                     <Text style={styles.headerText}>John</Text>
-                </View>                
-                <View style={styles.profile_badge}>
-                    <Image
-                        source={require('../assets/images/avatar.png')}
-                        resizeMode="center"
-                        style={{
-                            width: 40,
-                            height: 40,
-                        }}
-                    />
                 </View>
+                <Avatar.Image
+                    source={require('../assets/images/avatar.png')}
+                    size={50}
+                />
             </View>
         </ScreenLayout>
     )

@@ -1,6 +1,5 @@
 import { StyleSheet } from 'react-native'
 import { COLORS, FONTS } from './config/constants';
-import { Platform } from 'react-native';
 
 const styles = StyleSheet.create({
     container: {
@@ -21,19 +20,6 @@ const styles = StyleSheet.create({
         ...FONTS.h2,
         color: COLORS.font
     },
-    profile_badge: {
-        width: 40,
-        height: 40,
-        borderRadius: 50,
-        backgroundColor: COLORS.primary,
-        marginBottom: 10,
-        justifyContent: 'center',
-        alignItems: 'center',
-        ...Platform.select({
-            ios: { ...COLORS.boxShadowIos},
-            android: { ...COLORS.boxShadowAndroid}
-        }),
-    }
 });
 
 export default styles;

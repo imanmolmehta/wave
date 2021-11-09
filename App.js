@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native'
 import Tabs from './stacks/Tabs'
 import AppLoading from 'expo-app-loading'
 import { useFonts } from 'expo-font';
+import { Provider as PaperProvider } from 'react-native-paper'
 
 export default function App() {
 
@@ -21,10 +22,12 @@ export default function App() {
   }
     
   return (
-    <NavigationContainer>
-      <StatusBar barStyle='light-content' />
-      <Tabs />
-    </NavigationContainer>
+    <PaperProvider>
+      <NavigationContainer>
+        <StatusBar barStyle='light-content' />
+        <Tabs />
+      </NavigationContainer>
+    </PaperProvider>
   );
 }
 

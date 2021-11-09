@@ -3,6 +3,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import HomeStack from "./HomeStack";
 import ExploreStack from "./ExploreStack";
+import PlaylistStack from "./PlaylistStack";
 import { MaterialCommunityIcons, MaterialIcons } from "@expo/vector-icons";
 
 import { COLORS, SIZES } from '../config/constants'
@@ -33,7 +34,7 @@ const BottomNav = () => (
             name="HomeTab"
             component={HomeStack}
             options={{
-                tabBarIcon: ({focused, color}) => (
+                tabBarIcon: ({color}) => (
                     <MaterialCommunityIcons name="home" size={SIZES.h1} color={color} />
                 ),
                 tabBarLabel: 'Home',
@@ -43,10 +44,20 @@ const BottomNav = () => (
             name="ExploreTab"
             component={ExploreStack}
             options={{
-                tabBarIcon: ({focused, color}) => (
+                tabBarIcon: ({color}) => (
                     <MaterialIcons name="explore" size={SIZES.h1} color={color} />
                 ),
                 tabBarLabel: 'Explore',
+            }}
+        />
+        <Stack.Screen
+            name="PlaylistTab"
+            component={PlaylistStack}
+            options={{
+                tabBarIcon: ({color}) => (
+                    <MaterialIcons name="menu" size={SIZES.h1} color={color} />
+                ),
+                tabBarLabel: 'Playlist',
             }}
         />
     </Stack.Navigator>
