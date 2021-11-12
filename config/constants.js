@@ -25,6 +25,11 @@ export const COLORS = {
   overlay_bg: ['#212738', '#130238', '#150738'],
   transparent: 'transparent',
   transparentBlack1: "rgba(0, 0, 0, 0.1)",
+  transparentBlack2: "rgba(0, 0, 0, 0.2)",
+  transparentBlack3: "rgba(0, 0, 0, 0.3)",
+  transparentBlack4: "rgba(0, 0, 0, 0.4)",
+  transparentBlack5: "rgba(0, 0, 0, 0.5)",
+  transparentBlack6: "rgba(0, 0, 0, 0.6)",
   transparentBlack7: "rgba(0, 0, 0, 0.7)"
 }
 
@@ -50,7 +55,7 @@ export const SIZES = {
 
   // app dimensions
   width,
-  height
+  height,
 };
 
 export const FONTS = {
